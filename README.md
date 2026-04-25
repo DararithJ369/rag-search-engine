@@ -252,6 +252,17 @@ Key settings in `cli/lib/search_utils.py`:
 GEMINI_API_KEY=your_api_key_here
 ```
 
+## Notes
+
+- Cache files (`__pycache__`, `*.pyc`) are gitignored
+- Environment files (`.env`, `.python-version`) are gitignored
+- Data files and cache are pre-generated; ensure they're available before running
+- API keys must be set via `.env` file before execution
+
+## License
+
+Add license information here.
+
 ## Contributors
 
 - [DararithJ369]
