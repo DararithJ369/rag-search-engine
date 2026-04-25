@@ -1,0 +1,22 @@
+import json
+from pathlib import Path
+
+BM25_K1 = 1.5
+BM25_B = 0.75
+
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+DATA_PATH = PROJECT_ROOT / 'data'
+MOVIES_PATH = DATA_PATH / 'movies.json'
+STOPWORDS_PATH = DATA_PATH / 'stopwords.txt'
+CACHE_PATH = PROJECT_ROOT / 'cache'
+PROMPTS_PATH = PROJECT_ROOT / 'cli' / 'lib' / 'prompts'
+
+def load_movies() -> list[dict]:
+    with open(MOVIES_PATH, 'r') as f:
+        data = json.load(f)
+    return data['movies']
+
+def load_stopwords() -> set[str]:
+    with open(STOPWORDS_PATH, 'r') as f:
+        stopwords = set(line.strip() for line in f)
+    return stopwords    
