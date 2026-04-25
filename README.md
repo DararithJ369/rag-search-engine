@@ -72,7 +72,7 @@ rag-search-engine/
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
+git clone <https://github.com/DararithJ369/rag-search-engine>
 cd rag-search-engine
 ```
 
